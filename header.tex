@@ -1,0 +1,91 @@
+% ==========================================
+% Packages
+% ==========================================
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+
+% ==========================================
+% Table styling
+% ==========================================
+
+% Border thickness
+\setlength{\arrayrulewidth}{0.4pt}
+
+% Cell horizontal padding
+\setlength{\tabcolsep}{6pt}
+
+% Cell vertical spacing
+\renewcommand{\arraystretch}{1.3}
+
+% Table colors
+\definecolor{tablegray}{RGB}{245,245,245}
+\definecolor{tableborder}{RGB}{180,180,180}
+
+% Border color
+\arrayrulecolor{tableborder}
+
+% ==========================================
+% Table column definitions
+% ==========================================
+
+% Left aligned
+\newcolumntype{L}[1]{|>{\raggedright\arraybackslash}p{#1}|}
+
+% Center aligned
+\newcolumntype{C}[1]{|>{\centering\arraybackslash}p{#1}|}
+
+% Right aligned
+\newcolumntype{R}[1]{|>{\raggedleft\arraybackslash}p{#1}|}
+
+% ==========================================
+% Longtable styling
+% ==========================================
+
+\AtBeginEnvironment{longtable}{%
+    \small
+    \setlength{\arrayrulewidth}{0.4pt}
+}
+
+% ==========================================
+% Alternating row colors
+% ==========================================
+
+\rowcolors{2}{tablegray}{white}
+
+% ==========================================
+% General document styling
+% ==========================================
+
+% Paragraph spacing
+\setlength{\parskip}{6pt}
+
+% Prevent excessive indentation
+\setlength{\parindent}{0pt}
+
+% ==========================================
+% List styling
+% ==========================================
+
+\usepackage{enumitem}
+
+% Ordered lists
+\setlist[enumerate]{
+    itemsep=4pt,
+    parsep=0pt,
+    topsep=6pt,
+    partopsep=0pt
+}
+
+% Unordered lists
+\setlist[itemize]{
+    itemsep=4pt,
+    parsep=0pt,
+    topsep=6pt,
+    partopsep=0pt
+}
