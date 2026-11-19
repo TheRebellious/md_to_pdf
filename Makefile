@@ -1,5 +1,6 @@
 PDF_MARGIN ?= 0.5in
 PDF_ENGINE ?= xelatex
+PDF_MONOFONT ?= DejaVu Sans Mono
 MD_FILE ?= $(firstword $(wildcard *.md))
 PDF_FILE ?= $(basename $(MD_FILE)).pdf
 
@@ -17,6 +18,7 @@ pdf:
 		--resource-path="$(dir $(MD_FILE)):." \
 		--pdf-engine=$(PDF_ENGINE) \
 		--variable=mainfont:"Arial" \
+		--variable=monofont:"$(PDF_MONOFONT)" \
 		--variable=fontsize:11pt \
 		--variable=linestretch:1.15 \
 		--variable=table-of-contents:false \
